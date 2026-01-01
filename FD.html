@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FD Calculator</title>
+	<link rel="stylesheet" href="FD.css">
+</head>
+
+<body>
+	<div class="calc">
+		<h1>FD Calculator</h1>
+		  <div id="invalid">
+       Select One
+     </div>
+		<select id="sel" required>
+		 <option id="c" value="dis" disabled selected>Select a Currency</option>
+		  <option value="en-IN" id="rup">Rupees</option>
+		  <option value="en-NG" id="nai" >Naira</option>
+		  <option value="en-US" id="dol">Dollar</option>
+		  <option value="en-GB" id="pou">Pounds</option>
+		  <option value="en-DE" id="eur">Euros</option>
+		</select>
+		<div class="input">
+			<div class="sliders">
+				<label for="Total">Total Investment</label>
+			  <input type="range" id="total" min="10000" max="100000" step="10000" value="10000">
+			 <!-- corrected myself by adding a step attribute in the input element but haven't fixed the problem yet -->
+			  <span id="ival">₦10000</span>
+			</div>
+			  
+		  <div class="sliders">
+				<label for="rate">Rate of Interest (p.a)</label>
+			  <input type="range" id="rate" min="1" max="50" step="0.5" value="5">
+			  <span id="rval">5%</span>
+			</div>
+			
+			<div class="sliders">
+				<label for="time">Time Period(Years)</label>
+			  <input type="range" id="time" min="1" max="25" value="2">
+			  <span id="pval">2</span>
+		 </div>
+		
+		 <button onclick="CalFD()">INVEST NOW</button>
+		 
+		<div class="disp">
+			<p>Invested Amount: <span id="inv">-</span></p>
+			<p>Est. returns: <span id="est">-</span></p>
+			<p>Total value: <span id="tval">-</span></p>
+	</div>
+	</div>
+	</div>
+
+
+	
+	<script type="text/javascript" src="FD.js" charset="utf-8">
+	</script>
+</body>
+
+</html>
